@@ -1,3 +1,7 @@
+:root {
+    --container-width: 800px;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -6,7 +10,7 @@ html, body {
 }
 
 body {
-    font-family: 'Roboto', 'Open Sans', 'Segoe UI', sans-serif, serif;
+    font-family: 'Heebo', 'Noto Sans', 'Open Sans', 'Segoe UI', sans-serif, serif;
     font-size: 14pt;
 }
 
@@ -17,28 +21,90 @@ body {
 }
 
 .container-md {
-    width: 800px;
-}
-
-.container-shadow-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background-color: #000;
-    opacity: 0.2;
+    max-width: 800px;
 }
 
 .container-content {
-    position: relative;
+    margin: 0 50px;
     top: 0;
 }
 
-.header {
+.content-row {
     width: 100%;
-    height: 100px;
+    height: auto;
+}
+
+
+.col {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.col > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.col-1 {
+    float: left;
+}
+
+.col-2 {
+    margin-left: 50%;
+    padding-left: 15px;
+}
+
+.col > p {
+    margin: 0;
+}
+
+.nameplate > h1, .nameplate > h3 {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    margin: 35px 0;
+}
+
+article {
+    text-align: justify;
+}
+
+article.frontpage {
+    height: 100%;
+}
+
+article.blueprint {
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    height: 300px;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .col-2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .col {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .content-row {
+        min-width: 100px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    section {
+        height: auto;
+    }
 }
